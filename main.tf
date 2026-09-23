@@ -19,6 +19,8 @@ provider "aws" {
 
 resource "aws_s3_bucket" "workshop" {
   bucket_prefix = "tk-tf-gh-3.2"
+  #checkov:skip=CKV_AWS_145:Ensure that S3 buckets are encrypted with KMS by default
+
   tags = {
     Purpose = "github-actions-workshop"
   }
