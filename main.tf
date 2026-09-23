@@ -1,4 +1,5 @@
 terraform {
+required_version = ">= 1.0.0"
   backend "s3" {
     bucket = "sctp-tfstate-ce13"
     key    = "tk/tf-gh-3.2"
