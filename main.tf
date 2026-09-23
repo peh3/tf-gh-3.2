@@ -1,5 +1,11 @@
 terraform {
   required_version = ">= 1.0.0"
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 5.0"
+    }
+  }
   backend "s3" {
     bucket = "sctp-tfstate-ce13"
     key    = "tk/tf-gh-3.2"
